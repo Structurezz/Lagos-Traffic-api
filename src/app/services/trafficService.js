@@ -32,3 +32,4 @@ export const fetchTrafficData = async (origin, destination) => {
     throw new Error(`Error fetching traffic data: ${error.message}`);
   }
 };
+
