@@ -1,9 +1,13 @@
-import { app,  server }from './bootstrap/server.js';
+import { app } from './bootstrap/server.js';
+import { https } from 'firebase-functions';
 
-
-
-function startServer(){
-
+function startServer() {
+   
+    
 }
 
-startServer();
+if (process.env.NODE_ENV !== 'production') {
+    startServer();
+}
+
+export const api = https.onRequest(app);
